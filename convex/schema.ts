@@ -20,6 +20,7 @@ export default defineSchema({
     audioDuration: v.number(),
     views: v.number(),
   })
+  // searchIndex is used for define searching in convex dataBase query.
     .searchIndex('search_author', { searchField: 'author' })
     .searchIndex('search_title', { searchField: 'podcastTitle' })
     .searchIndex('search_body', { searchField: 'podcastDescription' }),
