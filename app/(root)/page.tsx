@@ -31,7 +31,7 @@ console.log(tasks);
       <section className="flex flex-col gap-5">
         <h1 className="text-20 font-bold text-white-1">Trending prodcasts</h1>
         <div className="flex min-h-screen flex-col items-center justify-between p-24 text-red-600">
-      {tasks?.map(({ _id, text }) => <div key={_id}>{text}</div>)}
+      {/* {tasks?.map(({ _id, text }) => <div key={_id}>{text}</div>)} */}
     </div>
         <div className="podcast_grid">
           {" "}

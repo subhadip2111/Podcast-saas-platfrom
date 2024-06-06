@@ -5,6 +5,7 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import NewMobileNav from "@/components/NewMobileNav";
+import { Toaster } from "@/components/ui/toaster";
 
 // const inter = Inter({ subsets: ["latin"] });
 
@@ -30,7 +31,7 @@ export default function RootLayout({
 <NewMobileNav/>
             </div>
 
-            <div className=" flex flex-col md:pb-14"> toster {children}</div>
+            <div className=" flex flex-col md:pb-14"> <Toaster/> {children}</div>
           </div>
         </section>
         <RightSidebar/>
