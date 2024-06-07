@@ -27,7 +27,7 @@ export const generateThumbnailAction = action({
   args: { prompt: v.string() },
   handler: async (_, { prompt }) => {
     const response = await openai.images.generate({
-      model: 'dall-e-3',
+      model: 'dall-e-2',
       prompt,
       size: '1024x1024',
       quality: 'standard',

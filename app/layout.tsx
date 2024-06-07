@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import {  Manrope } from "next/font/google";
 import "./globals.css";
-import ConvexClerkProvider from "./provider/ConvexClerkProvider";
+import ConvexClerkProvider from "@/provider/ConvexClerkProvider";
+import AudioProvider from "@/provider/AudioProvider";
 
-const inter = Inter({ subsets: ["latin"] });
+const manrope = Manrope({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Prodcasting ",
@@ -19,12 +20,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+   <ConvexClerkProvider>
+     <html lang="en">
+<AudioProvider>      <body className={manrope.className}>
         {" "}
-        <ConvexClerkProvider>{children}</ConvexClerkProvider>
-      </body>
+      {children}
+      </body></AudioProvider>
     </html>
+   </ConvexClerkProvider>
   );
 }
 
