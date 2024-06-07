@@ -6,6 +6,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import NewMobileNav from "@/components/NewMobileNav";
 import { Toaster } from "@/components/ui/toaster";
+import PodcastPlayer from "@/components/PodcastPlayer";
 
 // const inter = Inter({ subsets: ["latin"] });
 
@@ -36,6 +37,7 @@ export default function RootLayout({
         </section>
         <RightSidebar/>
       </main>
+      <PodcastPlayer/>
     </div>
   );
 }
